@@ -1,2 +1,1 @@
-# TextGame
-TP Final de la materia Paradigmas de la Programación.
+Ejecucion: java Juego mundo1.json

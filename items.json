@@ -1,0 +1,17 @@
+[
+  {
+    "descripcionItem": "espada",
+    "danio": 5,
+    "durabilidad": 5
+  },
+  {
+    "descripcionItem": "hacha de destruccion",
+    "danio": 15,
+    "durabilidad": 1
+  },
+  {
+    "descripcionItem": "pocion",
+    "danio": 0,
+    "durabilidad": 1
+  }
+]
