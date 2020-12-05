@@ -32,6 +32,30 @@
     ]
   },
   {
+    "codHab": 3,
+    "nombreHabitacion": "escuela",
+    "salidas": [
+      {
+        "direccionSalida": "oeste",
+        "codSalida": 1
+      }
+    ]
+  },
+  {
+    "codHab": 4,
+    "nombreHabitacion": "lago",
+    "salidas": [
+      {
+        "direccionSalida": "oeste",
+        "codSalida": 2
+      },
+      {
+        "direccionSalida": "norte",
+        "codSalida": 1
+      }
+    ]
+  },
+  {
     "codHab": 5,
     "nombreHabitacion": "hospital",
     "salidas": [
@@ -45,4 +69,6 @@
       }
     ]
   }
+
+
 ]

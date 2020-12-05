@@ -1,17 +1,27 @@
 [
   {
-    "descripcionItem": "espada",
+    "descripcionItem": "Espada ordinaria",
+    "danio": 3,
+    "durabilidad": 5
+  },
+  {
+    "descripcionItem": "Hacha comun",
+    "danio": 6,
+    "durabilidad": 2
+  },
+  {
+    "descripcionItem": "Alabardo del bardo.",
     "danio": 5,
     "durabilidad": 5
   },
   {
-    "descripcionItem": "hacha de destruccion",
-    "danio": 15,
-    "durabilidad": 1
+    "descripcionItem": "Nunchacu de poder.",
+    "danio": 4,
+    "durabilidad": 6
   },
   {
-    "descripcionItem": "pocion",
-    "danio": 0,
-    "durabilidad": 1
+    "descripcionItem": "Chancla",
+    "danio": 10,
+    "durabilidad": 2
   }
 ]

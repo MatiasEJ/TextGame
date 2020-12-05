@@ -10,16 +10,9 @@ public class Item {
 	private boolean inMochila = false;
 	private boolean enMano = false;
 
-	public boolean isInMochila() {
-		return inMochila;
-	}
 
 	public void setInMochila(boolean inMochila) {
 		this.inMochila = inMochila;
-	}
-
-	public boolean isEnMano() {
-		return enMano;
 	}
 
 	public void setEnMano(boolean enMano) {
@@ -81,5 +74,8 @@ public class Item {
 	}
 
 
-
+	@Override
+	public String toString() {
+		return this.nombre;
+	}
 }

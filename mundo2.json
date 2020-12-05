@@ -1,0 +1,19 @@
+[
+  {
+    "codHab": 1,
+    "habitacion": "casa"
+  },
+  {
+    "codHab": 2,
+    "habitacion": "cementerio"
+  },
+  {
+    "codHab": 3,
+    "habitacion": "escuela"
+  },
+
+  {
+    "codHab": 5,
+    "habitacion": "hospital"
+  }
+]

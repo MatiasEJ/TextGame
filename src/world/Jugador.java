@@ -1,30 +1,25 @@
 package world;
 
-
-import org.w3c.dom.ls.LSOutput;
+import world.errorHandling.ItemException;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Jugador extends Humanoide  {
-	private static Jugador instanciaJugador;
-	private Item       itemEquipado = null;
-	private List<Item> mochila = null;
-	private long       tiempoConVida     = 0;
-	private int maxVida = 0;
+public class Jugador extends Humanoide {
+	private Item       itemEquipado  = null;
+	private List<Item> mochila;
+	private long       tiempoConVida = 0;
+	private int        maxVida       = 0;
 
 
 	public Jugador(String nombre) {
 		//cuanta vida deberia tener?
-		super(nombre,20);
+		super(nombre, 20);
 		this.mochila = new ArrayList<>();
-
 	}
 
 
 	// ==- GyS
-
-
 	public void stats() {
 		System.out.println();
 		clearScreen();
@@ -36,26 +31,27 @@ public class Jugador extends Humanoide  {
 		System.out.println("============ STATS ACTUALES ============");
 	}
 
-
-
 	//STATS
 	public void pierdeVidaAlCaminar() {
 		this.vida--;
 		System.out.println("Tus heridas son graves, pierdes vida al moverte, te quedan (" + getVida() + ")");
+		if (this.vida < 0) {
+			muerte();
+		}
 	}
 
 	@Override
 	public void recibeDanio(int danioRecibido) {
 		super.recibeDanio(danioRecibido);
-		if (this.getVida() < 0){
+		if (this.getVida() < 1) {
+			this.vida = 0;
+			setAtacable(false);
 			muerte();
+
+
 		}
 	}
 
-
-
-
-	// MOCHILA
 	public List<Item> getMochila() {
 		return mochila;
 	}
@@ -69,20 +65,25 @@ public class Jugador extends Humanoide  {
 	}
 
 	public void guardarEnMochila(Item item) {
-		System.out.println("(*)" + item.getNombre() + " fue guardado en la mochila");
-		item.setInMochila(true);
-		mochila.add(item);
-	}
+		if (item!=null) {
 
-	public void desequipar(){
-		if (this.itemEquipado != null){
-		System.out.println("(*)" + this.itemEquipado + " fue desequipado.");
-		this.itemEquipado.setEnMano(false);
-		guardarEnMochila(this.itemEquipado);
+			System.out.println("(*)" + item.getNombre() + " fue guardado en la mochila");
+			item.setInMochila(true);
+			mochila.add(item);
+		} else {
+			System.out.println("Nada para guardar T_T");
 		}
 
 	}
 
+	public void desequipar() {
+		if (this.itemEquipado!=null) {
+			System.out.println("(*)" + this.itemEquipado + " fue desequipado.");
+			this.itemEquipado.setEnMano(false);
+			guardarEnMochila(this.itemEquipado);
+		}
+
+	}
 
 	public void imprimirMochila() {
 		for (Item item : getMochila()) {
@@ -103,10 +104,10 @@ public class Jugador extends Humanoide  {
 
 	private void isItemEquipado() {
 		linea();
-		if (itemEquipado!=null && itemEquipado.getDanio() > 0){
+		if (itemEquipado!=null && itemEquipado.getDanio() > 0) {
 			System.out.println("Llevas equipado: " + this.itemEquipado.getNombre());
-		}else{
-		System.out.println("No llevas nada equipado");
+		} else {
+			System.out.println("No llevas nada equipado");
 		}
 		linea();
 	}
@@ -114,36 +115,37 @@ public class Jugador extends Humanoide  {
 	public void escapar() {
 		System.out.println("Intentas escapar...");
 		int dados = pruebaSuerte();
-		if (dados < 2) {
-			this.vida = this.vida - 2;
+		if (dados < 4) {
+			this.vida = this.vida - 4;
 			System.out.println("Pero fallas, te rompes el craneo por " + 4 + " de danio");
 		} else {
-			System.out.println(enNegrita("Logras escapar!!")+ "La esperanza te regenera vida!");
-			this.vida = this.vida+2;
+			System.out.println(enNegrita("Logras escapar!!") + "La esperanza te regenera vida!");
+			this.vida = this.vida + 7;
 		}
 
 	}
 
-	public boolean isInMochila(Item item){
+	public boolean isInMochila(Item item) {
 		return getMochila().contains(item);
 	}
 
-	public void equipar(Item item) {
+	public void equipar(Item item) throws ItemException {
 		desequipar();
-		if (!isInMochila(item)){
+		if (!isInMochila(item)) {
 			System.out.println("Item: " + item.getNombre() + " equipado.");
+			System.out.println("Recibes bonus de " + item.getDanio());
 			item.setEnMano(true);
 			this.itemEquipado = item;
-		}else{
+		} else {
 			equiparDesdeMochila(item);
 		}
 
 	}
 
 
-	public void equiparDesdeMochila(Item itemAequipar){
+	public void equiparDesdeMochila(Item itemAequipar) {
 
-		if (isInMochila(itemAequipar)){
+		if (isInMochila(itemAequipar)) {
 			System.out.println("Item: " + itemAequipar.getNombre() + " equipado desde la mochila.");
 			this.itemEquipado = itemAequipar;
 			getMochila().remove(itemAequipar);
@@ -154,15 +156,11 @@ public class Jugador extends Humanoide  {
 
 	public void salir() {
 		this.vida = 0;
-		System.out.println("Abres los ojos, estas frente a la compu. Hay tarea de Analisis, ya quisieras estar en " +
+		System.out.println();
+		System.out.println("Abres los ojos, estas frente a la compu.\nHay tarea de Analisis, ya quisieras estar en " +
 				"ese" +
 				" " +
 				"apocalipsis zombie");
-	}
-
-	@Override
-	public boolean isInteractuable() {
-		return true;
 	}
 
 	//TODO ranking de supervivencia
@@ -170,12 +168,12 @@ public class Jugador extends Humanoide  {
 		this.tiempoConVida = milisec / 1000;
 	}
 
-	public void statsFinales(){
+	public void statsFinales() {
 		System.out.println("============ STATS FINALES ============");
-		System.out.println("Maxima Vida: "+ getMaximaVida());
-		System.out.println("Mataste: "+getConteoDeZombies());
-		System.out.println("Mejor Daño: "+getMejorDanioCritico());
+		System.out.println("Mejor Daño: " + super.getMejorDanioCritico());
 		System.out.println("Sobreviviste: " + tiempoConVida + " segundos.");
 		System.out.println("============ STATS FINALES ============");
 	}
+
+
 }

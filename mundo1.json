@@ -8,6 +8,15 @@
     "habitacion": "cementerio"
   },
   {
+    "codHab": 3,
+    "habitacion": "escuela"
+  },
+
+  {
+    "codHab": 4,
+    "habitacion": "lago"
+  },
+  {
     "codHab": 5,
     "habitacion": "hospital"
   }

@@ -2,10 +2,10 @@ package world;
 
 abstract class GRAFICOS {
 
-
-	public static void clearScreen() {
-		System.out.print("\033[H\033[2J");
-		System.out.flush();
+	public void clearScreen() {
+		for (int i = 0; i<15;i++){
+			System.out.println();
+		}
 	}
 
 	public void delay(int tiempoSegundos) {
@@ -81,13 +81,14 @@ abstract class GRAFICOS {
 				linea();
 				System.out.println(lugar);
 				linea();
-				System.out.print(
-						"      ^  ^\n" +
-								"  +---+  +--+\n" +
-								"<-+         +->\n" +
 
-								"<-+         +->\n" +
-								"  +---+  +--+\n" +
+				System.out.print(
+								"      ^  ^\n" +
+								"  +---+  +---+\n" +
+								"<-+            +->\n" +
+
+								"<-+            +->\n" +
+								"  +---+  +---+\n" +
 								"      v  v\n");
 				break;
 			case "cementerio":
@@ -96,13 +97,13 @@ abstract class GRAFICOS {
 				linea();
 				System.out.print(
 								"    ^  ^\n" +
-								"+---+  +--+\n" +
-								"|         |\n" +
-								"|         |\n" +
-								"|         |\n" +
-								"+---------+\n");
+								"+---+  +---+\n" +
+								"|          |\n" +
+								"|          |\n" +
+								"|          |\n" +
+								"+----------+\n");
 				break;
-			case "Building":
+			case "escuela":
 				linea();
 				System.out.println(lugar);
 				linea();
@@ -113,29 +114,29 @@ abstract class GRAFICOS {
 								"<-+        |\n" +
 								"  +--------+\n");
 				break;
-			case "Valley":
+			case "lago":
 				linea();
 				System.out.println(lugar);
 				linea();
 				System.out.print(
-								"     ^  ^\n" +
-								"  +--+  +--+\n" +
-								"<-+        |\n" +
-								"           |\n" +
-								"<-+        |\n" +
-								"  +--------+\n");
+								"      ^  ^\n" +
+								"  +---+  +---+\n" +
+								"<-+          |\n" +
+								"             |\n" +
+								"<-+          |\n" +
+								"  +----------+\n");
 				break;
 			case "hospital":
 				linea();
 				System.out.println(lugar);
 				linea();
 				System.out.print(
-					        	" +--------+\n" +
-								"<+        |\n" +
-								"          |\n" +
-								"<+        |\n" +
-								" +--+  +--+\n" +
-								"    v  v\n");
+					        	"  +----------+\n" +
+								"<-+          |\n" +
+								"             |\n" +
+								"<-+          |\n" +
+								"  +---+  +---+\n" +
+								"      v  v\n");
 				break;
 			default:
 				System.out.println("No encontrado el lugar");
@@ -170,14 +171,17 @@ abstract class GRAFICOS {
 
 	}
 
-	public static void introJuego(){
+	public void introJuego(){
+		logo();
 		linea();
 		System.out.println("...es esto una pesadilla?");
 		System.out.println("Bienvenido al 2021, te tenemos malas noticias: "+ enNegrita("apocalipsis zombie."));
-		System.out.println("Estas herido. No tienes como protegerte y estas rodeado.");
+		System.out.println("Estas herido. No tienes como protegerte. Estas rodeado. Y mañana es Lunes.");
 		System.out.println("Tu objetivo? "+enNegrita("sobrevivir"));
 	}
 
-
+	public void todoEnNegrita(String frase){
+		System.out.println(enNegrita(frase));
+	}
 
 }
