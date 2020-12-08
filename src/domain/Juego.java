@@ -65,7 +65,7 @@ public class Juego {
 				}
 				mundo1.close();
 
-				System.out.println(selectMundo+ " CARGADO");
+				System.out.println(selectMundo + " CARGADO");
 				mundo.clearScreen();
 				mundo.linea();
 				break;
@@ -81,14 +81,13 @@ public class Juego {
 		FileReader fl                = new FileReader("habitaciones.json");
 		JSONParser jsonParser        = new JSONParser();
 		JSONArray  arrayHabitaciones = (JSONArray) jsonParser.parse(fl);
-
+		List<Item> randomItems       = new ArrayList<>();
 		for (Object obj : arrayHabitaciones) {
-			JSONObject habitaciones     = (JSONObject) obj;
-			String     nombreHabitacion = (String) habitaciones.get("nombreHabitacion");
-			int        codHab           = (int) (long) habitaciones.get("codHab");
-			JSONArray  arraySalidas     = (JSONArray) habitaciones.get("salidas");
-
-			Map<String, Integer> salidas = new HashMap<>();
+			JSONObject           habitaciones     = (JSONObject) obj;
+			String               nombreHabitacion = (String) habitaciones.get("nombreHabitacion");
+			int                  codHab           = (int) (long) habitaciones.get("codHab");
+			JSONArray            arraySalidas     = (JSONArray) habitaciones.get("salidas");
+			Map<String, Integer> salidas          = new HashMap<>();
 			for (Object salida : arraySalidas) {
 				JSONObject sal             = (JSONObject) salida;
 				String     direccionSalida = (String) sal.get("direccionSalida");
@@ -96,10 +95,13 @@ public class Juego {
 
 				salidas.put(direccionSalida, codSalida);
 			}
+
+			randomItems = randomItems(listaItems);
+
 			if (ubicaciones.contains(nombreHabitacion)) {
 				mundo.agregarHabitacion(
 						codHab,
-						new Habitacion(codHab, nombreHabitacion, salidas, listaItems));
+						new Habitacion(codHab, nombreHabitacion, salidas, randomItems(randomItems)));
 
 			}
 
@@ -113,15 +115,40 @@ public class Juego {
 		JSONParser parserItems = new JSONParser();
 		JSONArray  itemsJson   = (JSONArray) parserItems.parse(frItems);
 		List<Item> listaItems  = new ArrayList<>();
+		int        cantItems;
 		for (Object obj : itemsJson) {
 			JSONObject item            = (JSONObject) obj;
 			String     descripcionItem = (String) item.get("descripcionItem");
 			int        danio           = (int) (long) item.get("danio");
 			int        durabilidad     = (int) (long) item.get("durabilidad");
 			listaItems.add(new Item(descripcionItem, danio, durabilidad));
+
+
 		}
+
+
 		frItems.close();
 		return listaItems;
+
+	}
+
+
+	public static List<Item> randomItems(List<Item> listaItems) {
+		int        cantItemsAremover;
+		int        itemAAgregar;
+		List<Item> nuevaLista = new ArrayList<>(listaItems);
+		while (true) {
+			cantItemsAremover = (int) Math.round(Math.random() * listaItems.size() / 2);
+			if (cantItemsAremover!=listaItems.size()) break;
+		}
+
+		for (int i = 0; i < cantItemsAremover; i++) {
+			itemAAgregar = (int) Math.round(Math.random() * nuevaLista.size());
+			System.out.println(itemAAgregar);
+
+			nuevaLista.remove(listaItems.get(itemAAgregar));
+		}
+		return nuevaLista;
 
 	}
 

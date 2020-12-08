@@ -1,9 +1,6 @@
 package world;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Habitacion  {
 	//ATRIBUTOS
@@ -19,7 +16,7 @@ public class Habitacion  {
 		this.description = description;
 		this.salidas = new HashMap<String, Integer>(salidas);
 		this.salidas.put("salir",0);
-		this.items = items;
+		this.items = new ArrayList<>(items);
 		this.monster = new Monster();
 	}
 

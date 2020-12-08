@@ -20,8 +20,33 @@
     "durabilidad": 6
   },
   {
-    "descripcionItem": "Chancla",
+    "descripcionItem": "Gomera",
+    "danio": 3,
+    "durabilidad": 4
+  },
+  {
+    "descripcionItem": "Silla",
+    "danio": 5,
+    "durabilidad": 2
+  },
+  {
+    "descripcionItem": "bate baseball",
     "danio": 10,
+    "durabilidad": 2
+  },
+  {
+    "descripcionItem": "cuchillo",
+    "danio": 7,
+    "durabilidad": 2
+  },
+  {
+    "descripcionItem": "lanza",
+    "danio": 10,
+    "durabilidad": 2
+  },
+  {
+    "descripcionItem": "sarten",
+    "danio": 4,
     "durabilidad": 2
   }
 ]

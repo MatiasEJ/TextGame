@@ -67,8 +67,7 @@ public class Mundo extends GRAFICOS {
 
 	public void mostrarSalidas() {
 		linea();
-		System.out.println(getHabitacionActual().getDescription());
-		linea();
+		mapaUbicacionActual(getHabitacionActual().getDescription());
 		System.out.println("Frente a ti puedes ver: " + (getHabitacionActual().getSalidas().size() - 1) + " salidas.");
 		for (String salida : getHabitacionActual().getSalidas()) {
 			if (!salida.equals("salir")) {
@@ -179,7 +178,6 @@ public class Mundo extends GRAFICOS {
 				moverse(direccionAmoverse);
 				break;
 			case "agarrar":
-
 				heroe.guardarEnMochila(itemAheroe(item));
 				break;
 			case "mirar":
@@ -271,8 +269,11 @@ public class Mundo extends GRAFICOS {
 
 	public Item itemAheroe(String nombreItem) {
 		for (Item item : getHabitacionActual().getItems()) {
+			System.out.println(item.getNombre());
 			if (item.getNombre().toLowerCase().equals(nombreItem.toLowerCase())) {
 				item.setInteractuable();
+				//
+				this.habitaciones.get(this.posicionActual).getItems().remove(item);
 				return item;
 			}
 		}
@@ -296,9 +297,9 @@ public class Mundo extends GRAFICOS {
 		linea();
 		System.out.println("En el piso ves: " + getHabitacionActual().getItems().size() + enNegrita(" Items!"));
 		for (Item item : getHabitacionActual().getItems()) {
-			if (!item.isInteractuable()) {
+			// if (!item.isInteractuable()) {
 				System.out.print(enNegrita("(*) ") + item.getNombre() + " ");
-			}
+			// }
 		}
 		System.out.println();
 		linea();
