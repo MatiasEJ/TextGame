@@ -1,4 +1,4 @@
-package world.errorHandling;
+package dostercios.errorHandling;
 
 public class ItemException extends Throwable {
 	private int id;
