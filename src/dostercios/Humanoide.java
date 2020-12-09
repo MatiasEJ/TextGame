@@ -1,13 +1,13 @@
 package dostercios;
 
 abstract class Humanoide extends GRAFICOS {
-	private String nombre;
-	int vida;
-	private boolean atacable = true;
-	int  mejorDanioCritico = 0;
-	int  conteoDeZombies   = 0;
-	Item itemEquipado;
-	int  maximaVida        = 0;
+	protected String  nombre;
+	protected int     vida;
+	protected Item    itemEquipado;
+	protected boolean atacable          = true;
+	protected int     mejorDanioCritico = 0;
+	protected int     conteoDeZombies   = 0;
+	protected int     maximaVida        = 0;
 
 	// CONSTRUCTORES
 	public Humanoide(String nombre, int vida) {
@@ -91,7 +91,7 @@ abstract class Humanoide extends GRAFICOS {
 			return 0;
 		}
 		itemEquipado.usoItem();
-		todoEnNegrita(" Bonus: "+itemEquipado.getDanio());
+		todoEnNegrita(" Bonus: " + itemEquipado.getDanio());
 		return itemEquipado.getDanio();
 
 	}
@@ -100,10 +100,10 @@ abstract class Humanoide extends GRAFICOS {
 	public int atacar(Humanoide humanoide) {
 		linea();
 		int danio;
-		if (this.getVida() > 0 && ( humanoide.isAtacable() || humanoide.getVida() > 0 )) {
+		if (this.getVida() > 0 && (humanoide.isAtacable() || humanoide.getVida() > 0)) {
 			System.out.println("==> Es el turno de " + this.getNombre() + " para atacar.");
 			danio = pruebaSuerte();
-			danio = modPorArma() +chanceCritico(danio);
+			danio = modPorArma() + chanceCritico(danio);
 			muestraAtaque(humanoide, danio);
 			guardaDatos(danio);
 			return danio;
@@ -116,6 +116,7 @@ abstract class Humanoide extends GRAFICOS {
 		}
 
 	}
+
 	private void muestraAtaque(Humanoide humanoide, int danio) {
 		System.out.println(enNegrita(this.getNombre()) + " ataca por (" + danio + ") de danio a (" + enNegrita(humanoide.getNombre()) + ")");
 		linea();
