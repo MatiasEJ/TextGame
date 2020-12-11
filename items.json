@@ -2,51 +2,79 @@
   {
     "descripcionItem": "Espada ordinaria",
     "danio": 3,
-    "durabilidad": 5
+    "durabilidad": 5,
+    "mundos": ["vampiros", "zombies"]
   },
   {
     "descripcionItem": "Hacha comun",
     "danio": 6,
-    "durabilidad": 2
+    "durabilidad": 2,
+    "mundos": ["vampiros", "zombies"]
   },
   {
     "descripcionItem": "Alabardo del bardo.",
     "danio": 5,
-    "durabilidad": 5
+    "durabilidad": 5,
+    "mundos": ["zombies"]
   },
   {
     "descripcionItem": "Nunchacu de poder.",
     "danio": 4,
-    "durabilidad": 6
+    "durabilidad": 6,
+    "mundos": ["zombies"]
   },
   {
     "descripcionItem": "Gomera",
     "danio": 3,
-    "durabilidad": 4
+    "durabilidad": 4,
+    "mundos": ["vampiros", "zombies"]
   },
   {
     "descripcionItem": "Silla",
     "danio": 5,
-    "durabilidad": 2
+    "durabilidad": 2,
+    "mundos": ["vampiros", "zombies"]
   },
   {
     "descripcionItem": "bate baseball",
     "danio": 10,
-    "durabilidad": 2
+    "durabilidad": 2,
+    "mundos": ["vampiros", "zombies"]
   },
   {
     "descripcionItem": "cuchillo",
     "danio": 7,
-    "durabilidad": 2
+    "durabilidad": 2,
+    "mundos": ["zombies"]
   },
   {
     "descripcionItem": "lanza",
     "danio": 10,
-    "durabilidad": 2
+    "durabilidad": 2,
+    "mundos": ["vampiros", "zombies"]
   },
   {
-    "descripcionItem": "sarten",
+    "descripcionItem": "crucifijo",
     "danio": 4,
-    "durabilidad": 2
+    "durabilidad": 2,
+    "mundos": ["vampiros"]
+  },
+  {
+    "descripcionItem": "armas bendecidas",
+    "danio": 4,
+    "durabilidad": 2,
+    "mundos": ["vampiros"]
+  },
+  {
+    "descripcionItem": "estaca",
+    "danio": 4,
+    "durabilidad": 2,
+    "mundos": ["vampiros"]
+  },
+  {
+    "descripcionItem": "ajo",
+    "danio": 4,
+    "durabilidad": 2,
+    "mundos": ["vampiros"]
   }
 ]

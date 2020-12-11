@@ -1,5 +1,6 @@
 package dostercios;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Item {
@@ -7,6 +8,7 @@ public class Item {
 	private int     danio;
 	private int     durabilidad = 1;
 	private boolean interactuable = false;
+	private List<String> mundos;
 	private boolean inMochila = false;
 	private boolean enMano = false;
 
@@ -23,10 +25,11 @@ public class Item {
 		return durabilidad;
 	}
 
-	public Item(String nombre, int danio, int durabilidad ) {
+	public Item(String nombre, int danio, int durabilidad, List<String> mundos ) {
 		this.nombre = nombre;
 		this.danio = danio;
 		this.durabilidad = durabilidad;
+		this.mundos = mundos;
 
 	}
 
@@ -53,6 +56,10 @@ public class Item {
 
 	void setInteractuable(){
 		this.interactuable = true;
+	}
+
+	public List<String> getMundos() {
+		return mundos;
 	}
 
 	@Override

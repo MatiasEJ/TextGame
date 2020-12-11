@@ -3,7 +3,7 @@ package dostercios;
 abstract class GRAFICOS {
 
 	public void clearScreen() {
-		for (int i = 0; i<15;i++){
+		for (int i = 0; i < 15; i++) {
 			System.out.println();
 		}
 	}
@@ -52,22 +52,32 @@ abstract class GRAFICOS {
 				"                                                                       \n");
 	}
 
-	public void logo(){
+	public void logo() {
 		System.out.println("\n");
 		System.out.println("\n" +
-				"████████╗██╗  ██╗██╗███████╗    ██╗███████╗    ██╗  ██╗ ██████╗ ██╗    ██╗    ██╗   ██╗ ██████╗ ██╗  " +
+				"████████╗██╗  ██╗██╗███████╗    ██╗███████╗    ██╗  ██╗ ██████╗ ██╗    ██╗    ██╗   ██╗ ██████╗ ██╗" +
+				" " +
+				" " +
 				" ██╗    ██████╗ ██╗███████╗\n" +
-				"╚══██╔══╝██║  ██║██║██╔════╝    ██║██╔════╝    ██║  ██║██╔═══██╗██║    ██║    ╚██╗ ██╔╝██╔═══██╗██║  " +
+				"╚══██╔══╝██║  ██║██║██╔════╝    ██║██╔════╝    ██║  ██║██╔═══██╗██║    ██║    ╚██╗ ██╔╝██╔═══██╗██║" +
+				" " +
+				" " +
 				" ██║    ██╔══██╗██║██╔════╝\n" +
-				"   ██║   ███████║██║███████╗    ██║███████╗    ███████║██║   ██║██║ █╗ ██║     ╚████╔╝ ██║   ██║██║  " +
+				"   ██║   ███████║██║███████╗    ██║███████╗    ███████║██║   ██║██║ █╗ ██║     ╚████╔╝ ██║   ██║██║" +
+				" " +
+				" " +
 				" ██║    ██║  ██║██║█████╗  \n" +
-				"   ██║   ██╔══██║██║╚════██║    ██║╚════██║    ██╔══██║██║   ██║██║███╗██║      ╚██╔╝  ██║   ██║██║  " +
+				"   ██║   ██╔══██║██║╚════██║    ██║╚════██║    ██╔══██║██║   ██║██║███╗██║      ╚██╔╝  ██║   ██║██║" +
+				" " +
+				" " +
 				" ██║    ██║  ██║██║██╔══╝  \n" +
 				"   ██║   ██║  ██║██║███████║    ██║███████║    ██║  ██║╚██████╔╝╚███╔███╔╝       ██║   " +
 				"╚██████╔╝╚██████╔╝    ██████╔╝██║███████╗\n" +
 				"   ╚═╝   ╚═╝  ╚═╝╚═╝╚══════╝    ╚═╝╚══════╝    ╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝        ╚═╝    ╚═════╝  " +
 				"╚═════╝     ╚═════╝ ╚═╝╚══════╝\n" +
-				"                                                                                                     " +
+				"                                                                                                   " +
+				" " +
+				" " +
 				"                           \n");
 	}
 
@@ -83,10 +93,9 @@ abstract class GRAFICOS {
 				linea();
 
 				System.out.print(
-								"      ^  ^\n" +
+						"      ^  ^\n" +
 								"  +---+  +---+\n" +
 								"<-+            +->\n" +
-
 								"<-+            +->\n" +
 								"  +---+  +---+\n" +
 								"      v  v\n");
@@ -96,7 +105,7 @@ abstract class GRAFICOS {
 				System.out.println(lugar);
 				linea();
 				System.out.print(
-								"    ^  ^\n" +
+						"    ^  ^\n" +
 								"+---+  +---+\n" +
 								"|          |\n" +
 								"|          |\n" +
@@ -108,7 +117,7 @@ abstract class GRAFICOS {
 				System.out.println(lugar);
 				linea();
 				System.out.print(
-								"  +--------+\n" +
+						"  +--------+\n" +
 								"<-+        |\n" +
 								"           |\n" +
 								"<-+        |\n" +
@@ -119,19 +128,78 @@ abstract class GRAFICOS {
 				System.out.println(lugar);
 				linea();
 				System.out.print(
-								"      ^  ^\n" +
+						"      ^  ^\n" +
 								"  +---+  +---+\n" +
 								"<-+          |\n" +
 								"             |\n" +
 								"<-+          |\n" +
 								"  +----------+\n");
 				break;
+			case "iglesia":
+			case "puerto":
+				linea();
+				System.out.println(lugar);
+				linea();
+				System.out.print(
+						"      ^  ^\n" +
+								"  +---+  +---+\n" +
+								"  +          +\n" +
+								"  +          +\n" +
+								"  +----------+\n");
+				break;
+
+			case "fabrica":
+				linea();
+				System.out.println(lugar);
+				linea();
+				System.out.print(
+						"  +----------+\n" +
+								"<-+          +->\n" +
+								"<-+          +->\n" +
+								"  +---+  +---+\n" +
+								"      v  v\n");
+				break;
+			case "shoping":
+				linea();
+				System.out.println(lugar);
+				linea();
+				System.out.print(
+						"      ^  ^\n" +
+								"  +---+  +---+\n" +
+								"  +          +->\n" +
+								"  +          +->\n" +
+								"  +----------+\n");
+				break;
+			case "universidad":
+				linea();
+				System.out.println(lugar);
+				linea();
+				System.out.print(
+						"  +----------+\n" +
+								"  +          +->\n" +
+								"  +          +->\n" +
+								"  +---+  +---+\n" +
+								"      v  v\n");
+				break;
+			case "cuartel de bomberos":
+				linea();
+				System.out.println(lugar);
+				linea();
+				System.out.print(
+						"      ^  ^\n" +
+								"  +---+  +---+\n" +
+								"<-+          +->\n" +
+								"<-+          +->\n" +
+								"  +----------+\n");
+				break;
+
+
 			case "hospital":
 				linea();
 				System.out.println(lugar);
 				linea();
 				System.out.print(
-					        	"  +----------+\n" +
+						"  +----------+\n" +
 								"<-+          |\n" +
 								"             |\n" +
 								"<-+          |\n" +
@@ -148,39 +216,50 @@ abstract class GRAFICOS {
 	}
 
 
-	public void muerte(){
+	public void muerte() {
 		System.out.println("___________________|");
 		System.out.println("|Woops, te moriste.|");
 		System.out.println("|__________________|");
 		System.out.println(
 				"      .-.\n" +
-				"     (o.o)\n" +
-				"      |=|\n" +
-				"     __|__\n" +
-				"   //.=|=.\\\\\n" +
-				"  // .=|=. \\\\\n" +
-				"  \\\\ .=|=. //\n" +
-				"   \\\\(_=_)//\n" +
-				"    (:| |:)\n" +
-				"     || ||\n" +
-				"     () ()\n" +
-				"     || ||\n" +
-				"     || ||\n" +
-				"    ==' '==");
+						"     (o.o)\n" +
+						"      |=|\n" +
+						"     __|__\n" +
+						"   //.=|=.\\\\\n" +
+						"  // .=|=. \\\\\n" +
+						"  \\\\ .=|=. //\n" +
+						"   \\\\(_=_)//\n" +
+						"    (:| |:)\n" +
+						"     || ||\n" +
+						"     () ()\n" +
+						"     || ||\n" +
+						"     || ||\n" +
+						"    ==' '==");
 		System.out.println("Eso no salio muy bien ^_^");
 
 	}
 
-	public void introJuego(){
-		logo();
-		linea();
+	public void introJuego(String universo) {
+		String intro = "", loMalo = "";
+		switch (universo) {
+			case "zombies":
+				intro = "APOCALIPSIS ZOMBIE";
+				loMalo = "Y se conforman con cerebros pequeños, osea, estas perdido.";
+				break;
+			case "vampiros":
+				intro = "los vampiros se pusieron de moda.";
+				loMalo = "Y ni uno de Crepusculo para salvarte";
+				break;
+			default:
+				break;
+		}
 		System.out.println("...es esto una pesadilla?");
-		System.out.println("Bienvenido al 2021, te tenemos malas noticias: "+ enNegrita("apocalipsis zombie."));
-		System.out.println("Estas herido. No tienes como protegerte. Estas rodeado. Y mañana es Lunes.");
-		System.out.println("Tu objetivo? "+enNegrita("sobrevivir"));
+		System.out.println("Bienvenido al 2021, te tenemos malas noticias: " + enNegrita(intro));
+		System.out.println("Estas herido. No tienes como protegerte. Estas rodeado. "+loMalo);
+		System.out.println("Tu objetivo? " + enNegrita("sobrevivir"));
 	}
 
-	public void todoEnNegrita(String frase){
+	public void todoEnNegrita(String frase) {
 		System.out.println(enNegrita(frase));
 	}
 
