@@ -1,0 +1,42 @@
+[
+  {
+    "codHab": 1,
+    "nombreHabitacion": "casa",
+    "salidas": {
+      "oeste": 2,
+      "norte": 5,
+      "este": 3,
+      "sur": 4
+    }
+  },
+  {
+    "codHab": 2,
+    "nombreHabitacion": "cementerio",
+    "salidas": {
+      "norte": 5
+    }
+  },
+  {
+    "codHab": 3,
+    "nombreHabitacion": "escuela",
+    "salidas": {
+      "oeste": 1
+    }
+  },
+  {
+    "codHab": 4,
+    "nombreHabitacion": "lago",
+    "salidas": {
+      "oeste": 2,
+      "norte": 1
+    }
+  },
+  {
+    "codHab": 5,
+    "nombreHabitacion": "hospital",
+    "salidas": {
+      "oeste": 2,
+      "sur": 1
+    }
+  }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "codHab": 1,
+    "nombreHabitacion": "casa",
+    "salidas": {
+      "oeste": 2,
+      "norte": 5,
+      "este": 3,
+      "sur": 4
+    }
+  },
+  {
+    "codHab": 2,
+    "nombreHabitacion": "cuartel de bomberos",
+      "salidas": {
+        "este": 1,
+        "norte": 3
+    }
+  },
+  {
+    "codHab": 3,
+    "nombreHabitacion": "universidad",
+    "salidas": {
+      "este": 4,
+      "sur": 2
+    }
+  },
+  {
+    "codHab": 4,
+    "nombreHabitacion": "iglesia",
+    "salidas": {
+      "este": 5,
+      "oeste": 3,
+      "sur": 1
+    }
+  },
+  {
+    "codHab": 5,
+    "nombreHabitacion": "hospital",
+    "salidas": {
+      "oeste": 4,
+      "sur": 6
+    }
+  },
+  {
+    "codHab": 6,
+    "nombreHabitacion": "lago",
+    "salidas": {
+      "norte": 5,
+      "oeste": 1
+    }
+  },
+  {
+    "codHab": 7,
+    "nombreHabitacion": "puert",
+    "salidas": {
+      "norte": 1
+    }
+  }
+]

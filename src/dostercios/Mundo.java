@@ -238,17 +238,18 @@ public class Mundo extends GRAFICOS {
 	}
 
 	private int posicionSalida(String direccion) {
-		for (String direccionSalida : mapaSalidas().keySet()) {
+		for (String direccionSalida: getHabitacionActual().getSalidas()){
 			if (direccionSalida.equals(direccion)) {
-				return mapaSalidas().get(direccionSalida);
+				return getHabitacionActual().getMapSalidas().get(direccionSalida);
 			}
+			System.out.println(direccionSalida);
 		}
 		return 0;
 	}
 
 	public boolean existeHabitacion(int codigo) {
 		for (int codHab : habitaciones.keySet()) {
-			if (codHab==codigo) {
+			if (codHab == codigo){
 				return true;
 			}
 		}
@@ -305,9 +306,9 @@ public class Mundo extends GRAFICOS {
 		linea();
 	}
 
+
 	public void crearPj() {
 		Scanner scanner = new Scanner(System.in);
-		introJuego();
 		System.out.print("Tu nombre es : ");
 		String nombre = scanner.nextLine();
 		linea();
@@ -377,5 +378,9 @@ public class Mundo extends GRAFICOS {
 			}
 		}
 	}
+
+
+
+
 
 }
