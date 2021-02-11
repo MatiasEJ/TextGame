@@ -1,6 +1,6 @@
 
 
-![logo](./logo.png "The Logo")
+![logo](./lib/logoTextGame.png "The Logo")
 ---
 Para empezar a jugar simplemente elegir el universo en el que queremos jugar (Por ahora: zombies o vampiros).
 
