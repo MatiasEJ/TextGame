@@ -14,9 +14,9 @@
     "codHab": 2,
     "nombreHabitacion": "cuartel de bomberos",
     "descripcionHabitacion": "El viejo cuartel de Bomberos, antes impecable, hoy muestra otra cara: Equipamiento en el piso, ropa ensangrentada en los rincones...",
-      "salidas": {
-        "este": 1,
-        "norte": 3
+    "salidas": {
+      "este": 1,
+      "norte": 3
     }
   },
   {

@@ -15,8 +15,6 @@ En el mundo encontraran enemigos, armas e items que te ayudaran (o no) a sobrevi
 Sobre el juego
 ---
 
-- La idea de la simpleza del archivo llamado mundo1.json es poder crear otros mundos, en base a un pool de habitaciones que se encuentra en habitaciones.json. 
-- En la idea de poder armar el lvl facilmente, nos encontramos que como las salidas estan fijas, todo depende de las 
-habitaciones que se carguen en el mundo. 
-Lo cual podria ser un bug, pero lo implementamos como parte del juego...no todo es lo que parece.
-- Hay formas de ganar vida, pero implican riesgos.
+![muestra](./lib/muestra1.png "The Logo")
+- Tp final de la materia Paradigmas de la Programación.
+- La idea del juego es sobrevivir lo más posible, investigando, peleando y con algo de suerte.
