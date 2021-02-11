@@ -15,7 +15,7 @@ public class Mundo extends GRAFICOS {
 			"este", "oeste", "norte", "sur", "agarrar", "atacar", "comandos", "mirar",
 			"mochila", "stats", "equipar", "salir", "escapar", "investigar");
 
-	// ==- CONSTRUCTORES
+	
 	private Mundo() {
 	}
 
@@ -31,8 +31,6 @@ public class Mundo extends GRAFICOS {
 	}
 
 
-	// ==- Getters&Setters
-
 	public Jugador getHeroe() {
 		return heroe;
 	}
@@ -46,7 +44,9 @@ public class Mundo extends GRAFICOS {
 	}
 
 	public void mostrarContenidoHabitacion() throws InterruptedException {
-		System.out.println("Te encuentras en: ");
+		linea();
+		System.out.println("Te encuentras en: "+getHabitacionActual().getNombre());
+		System.out.println(enItalic(getHabitacionActual().getDescripcionHabitacion()));
 		mostrarSalidas();
 		mostrarItems();
 		System.out.println();
@@ -66,9 +66,7 @@ public class Mundo extends GRAFICOS {
 	}
 
 	public void mostrarSalidas() {
-		linea();
-		mapaUbicacionActual(getHabitacionActual().getDescription());
-		System.out.println("Frente a ti puedes ver: " + (getHabitacionActual().getSalidas().size() - 1) + " salidas.");
+		System.out.println("Puedes ver " + (getHabitacionActual().getSalidas().size() - 1) + " posibles salidas. ");
 		for (String salida : getHabitacionActual().getSalidas()) {
 			if (!salida.equals("salir")) {
 				System.out.print(enNegrita(salida) + " ");
@@ -76,6 +74,9 @@ public class Mundo extends GRAFICOS {
 			}
 
 		}
+		System.out.println();
+		System.out.println("Pero como estar seguro?");
+		mapaUbicacionActual(getHabitacionActual().getNombre());
 		System.out.println();
 	}
 
@@ -242,7 +243,6 @@ public class Mundo extends GRAFICOS {
 			if (direccionSalida.equals(direccion)) {
 				return getHabitacionActual().getMapSalidas().get(direccionSalida);
 			}
-			System.out.println(direccionSalida);
 		}
 		return 0;
 	}
@@ -270,7 +270,6 @@ public class Mundo extends GRAFICOS {
 
 	public Item itemAheroe(String nombreItem) {
 		for (Item item : getHabitacionActual().getItems()) {
-			System.out.println(item.getNombre());
 			if (item.getNombre().toLowerCase().equals(nombreItem.toLowerCase())) {
 				item.setInteractuable();
 				//
@@ -296,7 +295,7 @@ public class Mundo extends GRAFICOS {
 
 	public void mostrarItems() {
 		linea();
-		System.out.println("En el piso ves: " + getHabitacionActual().getItems().size() + enNegrita(" Items!"));
+		System.out.println("Puedes ver " + getHabitacionActual().getItems().size() + enNegrita(" items en el piso: "));
 		for (Item item : getHabitacionActual().getItems()) {
 			// if (!item.isInteractuable()) {
 				System.out.print(enNegrita("(*) ") + item.getNombre() + " ");

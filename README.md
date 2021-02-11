@@ -2,7 +2,7 @@
 
 ![logo](./logo.png "The Logo")
 ---
-Para empezar a jugar cargar "mundo1" o "mundo2" (sin las comillas).
+Para empezar a jugar simplemente elegir el universo en el que queremos jugar (Por ahora: zombies o vampiros).
 
 Para jugar, simplemente intentar interactuar en las situaciones que se presentan con esta (*en un principio*) lista de comandos.
 ```

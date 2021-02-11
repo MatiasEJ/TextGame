@@ -2,6 +2,7 @@
   {
     "codHab": 1,
     "nombreHabitacion": "casa",
+    "descripcionHabitacion": "Es una vieja casa, hay muebles contra las ventanas y claros signos de lucha. Una fina capa de polvo cubre todo.",
     "salidas": {
       "oeste": 2,
       "norte": 5,
@@ -12,6 +13,7 @@
   {
     "codHab": 2,
     "nombreHabitacion": "cuartel de bomberos",
+    "descripcionHabitacion": "El viejo cuartel de Bomberos, antes impecable, hoy muestra otra cara: Equipamiento en el piso, ropa ensangrentada en los rincones...",
       "salidas": {
         "este": 1,
         "norte": 3
@@ -20,6 +22,7 @@
   {
     "codHab": 3,
     "nombreHabitacion": "universidad",
+    "descripcionHabitacion": "La uni esta sospechosamente tranquila, porque el resto de la ciudad parece en ruinas y aqui esta todo normal?",
     "salidas": {
       "este": 4,
       "sur": 2
@@ -28,6 +31,7 @@
   {
     "codHab": 4,
     "nombreHabitacion": "iglesia",
+    "descripcionHabitacion": "Si la iglesia alguna vez actuo como refugio espiritual, hoy por hoy vemos que es un literal refugio de la humanidad, ventanas selladas con maderas, armas improvisadas con restos de bancos...",
     "salidas": {
       "este": 5,
       "oeste": 3,
@@ -37,6 +41,7 @@
   {
     "codHab": 5,
     "nombreHabitacion": "hospital",
+    "descripcionHabitacion": "Porque este lugar esta vacio? No hay nada... como si fuera...nuevo, a estrenar. Como invitandote a entrar...",
     "salidas": {
       "oeste": 4,
       "sur": 6
@@ -45,6 +50,7 @@
   {
     "codHab": 6,
     "nombreHabitacion": "lago",
+    "descripcionHabitacion": "Que aprendimos de las Peliculas de Terror? LAGOS NO. Todo muy lindo y pacifico hasta que algo te jala las patas.",
     "salidas": {
       "norte": 5,
       "oeste": 1
@@ -52,7 +58,8 @@
   },
   {
     "codHab": 7,
-    "nombreHabitacion": "puert",
+    "nombreHabitacion": "puerto",
+    "descripcionHabitacion": "No se que es peor, estar huyendo de los peligros de hoy...o este silencio, nada, absolutamente nada, excepto por el ruido del agua contra la orilla...aqui hay algo que no esta bien",
     "salidas": {
       "norte": 1
     }

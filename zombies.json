@@ -2,6 +2,7 @@
   {
     "codHab": 1,
     "nombreHabitacion": "casa",
+    "descripcionHabitacion": "Es una vieja casa, hay muebles contra las ventanas y claros signos de lucha. Una fina capa de polvo cubre todo.",
     "salidas": {
       "oeste": 2,
       "norte": 5,
@@ -12,6 +13,7 @@
   {
     "codHab": 2,
     "nombreHabitacion": "cementerio",
+    "descripcionHabitacion": "Mira que había lugares para ir...pero un cementerio? te parece? Todo lo que podes imaginarte de una peli de terror esta aca: los arboles tapando la vista, enredaderas gigantes como una gran masa devorando el mausoleo.",
     "salidas": {
       "norte": 5
     }
@@ -19,6 +21,7 @@
   {
     "codHab": 3,
     "nombreHabitacion": "escuela",
+    "descripcionHabitacion": "Si antes este lugar emanaba la positiva energia de los jovenes y de un futuro mejor, hoy emana otra energia... suciedad por todos lados, bancos contra las ventanas, cuadernos y mochilas por donde veas.",
     "salidas": {
       "oeste": 1
     }
@@ -26,6 +29,7 @@
   {
     "codHab": 4,
     "nombreHabitacion": "lago",
+    "descripcionHabitacion": "Que aprendimos de las Peliculas de Terror? LAGOS NO. Todo muy lindo y pacifico hasta que algo te jala las patas.",
     "salidas": {
       "oeste": 2,
       "norte": 1
@@ -34,6 +38,7 @@
   {
     "codHab": 5,
     "nombreHabitacion": "hospital",
+    "descripcionHabitacion": "Porque este lugar esta vacio? No hay nada... como si fuera...nuevo, a estrenar. Como invitandote a entrar...",
     "salidas": {
       "oeste": 2,
       "sur": 1

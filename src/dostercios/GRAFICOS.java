@@ -1,5 +1,7 @@
 package dostercios;
 
+import org.w3c.dom.Text;
+
 abstract class GRAFICOS {
 
 	public void clearScreen() {
@@ -36,6 +38,9 @@ abstract class GRAFICOS {
 
 	public static String enNegrita(String aConvertir) {
 		return "\033[1m" + aConvertir + "\033[0m";
+	}
+	public static String enItalic(String aConvertir){
+		return "\033[3m"+aConvertir+"\033[0m";
 	}
 
 	public static void linea() {

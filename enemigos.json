@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "zombie",
+    "vida": 15,
+    "descripcion": "Clasico zombie.",
+    "ataque": 2,
+    "universo": ["zombies"]
+  },
+  {
+    "id": 2,
+    "nombre": "Crawler",
+    "vida": 20,
+    "descripcion": "Ey, se parece a tu ex, pero mas atractivo.",
+    "ataque": 4,
+    "universo": ["zombies"]
+  },
+  {
+    "id": 3,
+    "nombre": "Nemesis",
+    "vida": 35,
+    "descripcion": "CORRE.",
+    "ataque": 10,
+    "universo": ["zombies"]
+  },
+  {
+    "id": 4,
+    "nombre": "Neonato",
+    "vida": 15,
+    "descripcion": "Vampiro recien iniciado. No mas amenazante que un poodle con problemas de ira.",
+    "ataque": 2,
+    "universo": ["vampiros"]
+  },
+  {
+    "id": 5,
+    "nombre": "Ancilla",
+    "vida": 25,
+    "descripcion": "No lo se Rick, parece un tipo poderoso. Poderoso = buen loot",
+    "ataque": 6,
+    "universo": ["vampiros"]
+  },
+  {
+    "id": 6,
+    "nombre": "Principe",
+    "vida": 35,
+    "descripcion": "Vas a morir.",
+    "ataque": 10,
+    "universo": ["vampiros"]
+  }
+]
